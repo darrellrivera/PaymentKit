@@ -52,6 +52,8 @@ static NSString *const kPKOldLocalizedStringsTableName = @"STPaymentLocalizable"
 @property (nonatomic) PKCardNumber *cardNumber;
 @property (nonatomic) PKCardExpiry *cardExpiry;
 @property (nonatomic) PKAddressZip *addressZip;
+@property (nonatomic) UIToolbar *toolbar;
+@property (nonatomic) UIBarButtonItem *keyboardToggleButton;
 @end
 
 #pragma mark -
@@ -156,11 +158,43 @@ static NSString *const kPKOldLocalizedStringsTableName = @"STPaymentLocalizable"
     self.addressZipField = [[PKTextField alloc] initWithFrame:CGRectMake(kPKViewCardAddressZipStartX, 0, 55, 20)];
     self.addressZipField.delegate = self;
     self.addressZipField.placeholder = @"ZIP";
-    self.addressZipField.keyboardType = UIKeyboardTypeNumberPad;
     self.addressZipField.textColor = DarkGreyColor;
     self.addressZipField.font = DefaultBoldFont;
 
+    if([[[NSLocale currentLocale] objectForKey:NSLocaleCountryCode] isEqualToString:@"US"]){
+        self.addressZipField.keyboardType = UIKeyboardTypeNumberPad;
+      self.addressZipField.inputAccessoryView = self.toolbar;
+    } else {
+        self.addressZipField.keyboardType = UIKeyboardTypeNamePhonePad;
+    }
+
     [self.addressZipField.layer setMasksToBounds:YES];
+}
+
+- (UIToolbar *)toolbar {
+  if (nil == _toolbar) {
+    _toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.frame.size.width, 44.0f)];
+    _toolbar.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    
+    UIImage *image = [UIImage imageNamed:@"IconKeyboard"];
+    self.keyboardToggleButton = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(toggleKeyboard)];
+    
+    NSMutableArray *items = [NSMutableArray arrayWithObjects:self.keyboardToggleButton, nil];
+    
+    [_toolbar setItems:items];
+  }
+  return _toolbar;
+}
+
+- (void) toggleKeyboard {
+  if(self.addressZipField.keyboardType == UIKeyboardTypeNumberPad) {
+    self.addressZipField.keyboardType = UIKeyboardTypeDefault;
+    self.keyboardToggleButton.image = [UIImage imageNamed:@"IconNumpad"];
+  } else {
+    self.addressZipField.keyboardType = UIKeyboardTypeNumberPad;
+    self.keyboardToggleButton.image = [UIImage imageNamed:@"IconKeyboard"];
+  }
+  [self.addressZipField reloadInputViews];
 }
 
 // Checks both the old and new localization table (we switched in 3/14 to PaymentKit.strings).
