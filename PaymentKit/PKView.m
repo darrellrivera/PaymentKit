@@ -13,8 +13,8 @@
 
 #define kPKViewPlaceholderViewAnimationDuration 0.25
 
-#define kPKViewCardExpiryFieldStartX 84 + 200
-#define kPKViewCardExpiryFieldEndX 84
+#define kPKViewCardExpiryFieldStartX 184 + 200
+#define kPKViewCardExpiryFieldEndX 184
 
 static NSString *const kPKLocalizedStringsTableName = @"PaymentKit";
 static NSString *const kPKOldLocalizedStringsTableName = @"STPaymentLocalizable";
