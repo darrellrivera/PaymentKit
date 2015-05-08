@@ -14,8 +14,6 @@
 		4C332B4316FA5297009C782D /* textfield.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C332B4116FA5297009C782D /* textfield.png */; };
 		4C332B4416FA5297009C782D /* textfield@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C332B4216FA5297009C782D /* textfield@2x.png */; };
 		4C332B4B16FA6240009C782D /* gradient@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C332B4A16FA6240009C782D /* gradient@2x.png */; };
-		F4BC80291ABC986B00C5A70D /* IconKeyboard.png in Resources */ = {isa = PBXBuildFile; fileRef = F4BC80271ABC986B00C5A70D /* IconKeyboard.png */; };
-		F4BC802A1ABC986B00C5A70D /* IconNumpad.png in Resources */ = {isa = PBXBuildFile; fileRef = F4BC80281ABC986B00C5A70D /* IconNumpad.png */; };
 		FA007D1F16FA3B82006DD86E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6F1A5916C19BF700835C75 /* QuartzCore.framework */; };
 		FA2A74A016BB1EDD00AF0078 /* PKCard.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2A749F16BB1EDD00AF0078 /* PKCard.m */; };
 		FA3A8C5A16D208E300A9C346 /* PKUSAddressZip.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3A8C5916D208E300A9C346 /* PKUSAddressZip.m */; };
@@ -76,8 +74,6 @@
 		4C332B4116FA5297009C782D /* textfield.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textfield.png; sourceTree = "<group>"; };
 		4C332B4216FA5297009C782D /* textfield@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "textfield@2x.png"; sourceTree = "<group>"; };
 		4C332B4A16FA6240009C782D /* gradient@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gradient@2x.png"; sourceTree = "<group>"; };
-		F4BC80271ABC986B00C5A70D /* IconKeyboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconKeyboard.png; sourceTree = "<group>"; };
-		F4BC80281ABC986B00C5A70D /* IconNumpad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconNumpad.png; sourceTree = "<group>"; };
 		FA2A749E16BB1EDD00AF0078 /* PKCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = PKCard.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		FA2A749F16BB1EDD00AF0078 /* PKCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PKCard.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		FA3A8C5816D208E300A9C346 /* PKUSAddressZip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKUSAddressZip.h; sourceTree = "<group>"; };
@@ -179,8 +175,6 @@
 		4C332B4516FA529C009C782D /* TextField */ = {
 			isa = PBXGroup;
 			children = (
-				F4BC80271ABC986B00C5A70D /* IconKeyboard.png */,
-				F4BC80281ABC986B00C5A70D /* IconNumpad.png */,
 				4C332B4A16FA6240009C782D /* gradient@2x.png */,
 				4C332B4116FA5297009C782D /* textfield.png */,
 				4C332B4216FA5297009C782D /* textfield@2x.png */,
@@ -409,7 +403,6 @@
 				FA45AC8516AE350D0003A41D /* Default@2x.png in Resources */,
 				FA45AC8716AE350E0003A41D /* Default-568h@2x.png in Resources */,
 				FA45AC8D16AE350E0003A41D /* PaymentViewController.xib in Resources */,
-				F4BC802A1ABC986B00C5A70D /* IconNumpad.png in Resources */,
 				FA6F1A5F16C1B21000835C75 /* ViewController.xib in Resources */,
 				FAA3610816C9F21C00049C6F /* amex.png in Resources */,
 				FAA3610916C9F21C00049C6F /* amex@2x.png in Resources */,
@@ -418,7 +411,6 @@
 				FAA3610C16C9F21C00049C6F /* cvc.png in Resources */,
 				FAA3610D16C9F21C00049C6F /* cvc@2x.png in Resources */,
 				FAA3610E16C9F21C00049C6F /* diners.png in Resources */,
-				F4BC80291ABC986B00C5A70D /* IconKeyboard.png in Resources */,
 				FAA3610F16C9F21C00049C6F /* diners@2x.png in Resources */,
 				FAA3611016C9F21C00049C6F /* discover.png in Resources */,
 				FAA3611116C9F21C00049C6F /* discover@2x.png in Resources */,
